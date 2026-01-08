@@ -699,11 +699,11 @@ hashcat -r demo.rule --stdout demo.txt
 
 | Phase | Suggested Time |
 |---|---|
-| Recon (all 4 machines) | 2-3 hours |
+| Recon (all 4 machines) | 4-5 hours |
 | Initial Access (per machine) | 1-2 hours |
 | Privilege Escalation | 2-3 hours |
-| Documentation | 1-2 hours |
-| Buffer/troubleshooting | 2+ hours |
+| Documentation | 3-4 hours |
+| Buffer/troubleshooting | 3+ hours |
 
 ### When Stuck
 
@@ -821,4 +821,4 @@ evil-winrm -i IP -u admin -p password
 
 **Last Updated:** January 2026  
 **Status:** Active use during OSCP exam preparation  
-**Format:** Markdown (compatible with GitHub, Obsidian, Notion)
+
