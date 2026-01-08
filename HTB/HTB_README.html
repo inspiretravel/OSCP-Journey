@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackTheBox Writeups - 50+ Machines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 20px;
+        }
+
+        /* Statistics */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-card h3 {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        .nav-section {
+            margin: 30px 0;
+        }
+
+        .nav-section h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 15px 20px;
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: #667eea;
+            color: white;
+            transform: translateX(5px);
+        }
+
+        /* Tables */
+        .table-section {
+            margin: 40px 0;
+        }
+
+        .table-section h3 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            font-size: 1.5em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        th:last-child {
+            border-right: none;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: #f9f9f9;
+        }
+
+        .difficulty-easy {
+            background: #d4edda;
+            color: #155724;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .difficulty-medium {
+            background: #fff3cd;
+            color: #856404;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .difficulty-hard {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ad-yes {
+            color: #28a745;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .ad-no {
+            color: #dc3545;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+
+        .writeup-link {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #667eea;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .writeup-link:hover {
+            background: #764ba2;
+            transform: scale(1.1);
+        }
+
+        /* Learning Paths */
+        .learning-path {
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .learning-path h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .learning-path p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .machines-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .machine-tag {
+            background: white;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 0.9em;
+        }
+
+        /* Techniques Section */
+        .techniques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .technique-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .technique-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .technique-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .technique-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .technique-card li {
+            padding: 5px 0;
+            color: #555;
+        }
+
+        .technique-card li:before {
+            content: "→ ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        /* Tools Section */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tool-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tool-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .tool-card p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        /* Resources Section */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .resource-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .resource-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .resource-card a {
+            display: block;
+            margin: 8px 0;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .resource-card a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: #f5f5f5;
+            border-top: 2px solid #e0e0e0;
+            padding: 30px 20px;
+            text-align: center;
+            color: #666;
+        }
+
+        .footer p {
+            margin: 10px 0;
+        }
+
+        .footer a {
+            color: #667eea;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .stats {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .table-wrapper {
+                font-size: 0.9em;
+            }
+
+            th, td {
+                padding: 10px;
+            }
+
+            .machines-list {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+
+        .table-of-contents {
+            background: #f9f9f9;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .table-of-contents h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .table-of-contents li {
+            padding: 8px 0;
+        }
+
+        .table-of-contents a {
+            display: block;
+            padding: 5px 10px;
+            color: #667eea;
+            transition: all 0.3s ease;
+        }
+
+        .table-of-contents a:hover {
+            background: #667eea;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 HackTheBox Writeups</h1>
+            <p>Comprehensive Machine Collection - 50+ Machines</p>
+            <div class="badges">
+                <span class="badge">📊 50+ Machines</span>
+                <span class="badge">✅ Active</span>
+                <span class="badge">📅 Updated Jan 2025</span>
+                <span class="badge">🔗 MIT License</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- Statistics -->
+            <section class="stats">
+                <div class="stat-card">
+                    <h3>Total Machines</h3>
+                    <div class="number">50+</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Windows</h3>
+                    <div class="number">25+</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Linux</h3>
+                    <div class="number">25+</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Directory</h3>
+                    <div class="number">8+</div>
+                </div>
+            </section>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#windows-machines">Windows Machines</a></li>
+                    <li><a href="#linux-machines">Linux Machines</a></li>
+                    <li><a href="#active-directory">Active Directory</a></li>
+                    <li><a href="#learning-paths">Learning Paths</a></li>
+                    <li><a href="#techniques">Techniques Library</a></li>
+                    <li><a href="#tools">Tools & Resources</a></li>
+                </ul>
+            </div>
+
+            <!-- Windows Machines -->
+            <section class="table-section" id="windows-machines">
+                <h2>🪟 Windows Machines</h2>
+
+                <h3>Windows - Easy (🟢)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>AD</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Blue</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>SMB RCE / EternalBlue</td>
+                                <td>CVE-2017-0144</td>
+                                <td><a href="https://app.hackthebox.com/machines/Blue" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Legacy</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Samba RCE</td>
+                                <td>CVE-2007-2447</td>
+                                <td><a href="https://app.hackthebox.com/machines/Legacy" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Lame</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Samba RCE</td>
+                                <td>CVE-2007-2447</td>
+                                <td><a href="https://app.hackthebox.com/machines/Lame" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Devel</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>FTP + WebDAV RCE</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Devel" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Tenten</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>RFI + Plugin Exploit</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Tenten" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Optimum</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>HFS RCE</td>
+                                <td>CVE-2014-6287</td>
+                                <td><a href="https://app.hackthebox.com/machines/Optimum" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><strong>Bastard</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Drupal RCE</td>
+                                <td>CVE-2018-7600</td>
+                                <td><a href="https://app.hackthebox.com/machines/Bastard" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><strong>Granny</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>WebDAV RCE</td>
+                                <td>CVE-2017-7269</td>
+                                <td><a href="https://app.hackthebox.com/machines/Granny" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Windows - Medium (🟡)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>AD</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>9</td>
+                                <td><strong>Active</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-yes">✅</span></td>
+                                <td>Kerberoasting / GPP</td>
+                                <td>CVE-2012-1493</td>
+                                <td><a href="https://app.hackthebox.com/machines/Active" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><strong>Forest</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-yes">✅</span></td>
+                                <td>AD Enum / DCSync</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Forest" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td><strong>Jerry</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Tomcat RCE</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Jerry" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td><strong>Remote</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>UmbracoMvc RCE</td>
+                                <td>CVE-2019-18988</td>
+                                <td><a href="https://app.hackthebox.com/machines/Remote" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td><strong>Buff</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Code Execution</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Buff" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Windows - Hard (🔴)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>AD</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>19</td>
+                                <td><strong>Cascade</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td><span class="ad-yes">✅</span></td>
+                                <td>AD Enumeration / PrivEsc</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Cascade" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td><strong>Sauna</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td><span class="ad-yes">✅</span></td>
+                                <td>ASREP Roasting / PrivEsc</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Sauna" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td><strong>Monteverde</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td><span class="ad-yes">✅</span></td>
+                                <td>Azure Enumeration / ADSync</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Monteverde" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Linux Machines -->
+            <section class="table-section" id="linux-machines">
+                <h2>🐧 Linux Machines</h2>
+
+                <h3>Linux - Easy (🟢)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>AD</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24</td>
+                                <td><strong>Popcorn</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>File Upload Bypass</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Popcorn" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td><strong>Nineveh</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>File Enumeration</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Nineveh" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>26</td>
+                                <td><strong>Beep</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Asterisk Enumeration</td>
+                                <td>CVE-2011-4730</td>
+                                <td><a href="https://app.hackthebox.com/machines/Beep" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>27</td>
+                                <td><strong>Shocker</strong></td>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>Shellshock RCE</td>
+                                <td>CVE-2014-6271</td>
+                                <td><a href="https://app.hackthebox.com/machines/Shocker" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Linux - Medium (🟡)</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>AD</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>31</td>
+                                <td><strong>Cronos</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>DNS Zone Transfer</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Cronos" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>32</td>
+                                <td><strong>Haircut</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>File Upload RCE</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Haircut" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td><strong>Networked</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td><span class="ad-no">❌</span></td>
+                                <td>File Upload Bypass</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Networked" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Active Directory Machines -->
+            <section class="table-section" id="active-directory">
+                <h2>🔐 Active Directory Machines</h2>
+                <p>Specialized Active Directory exploitation machines covering various AD attack vectors.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Machine</th>
+                                <th>Difficulty</th>
+                                <th>Main Technique</th>
+                                <th>CVE</th>
+                                <th>HTB Link</th>
+                                <th>Writeup</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Active</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td>Group Policy Preferences / Kerberoasting</td>
+                                <td>CVE-2012-1493</td>
+                                <td><a href="https://app.hackthebox.com/machines/Active" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Forest</strong></td>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td>Active Directory Enumeration / DCSync</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Forest" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Cascade</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td>Active Directory Privilege Escalation</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Cascade" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><strong>Sauna</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td>ASREP Roasting / Kerberoasting</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Sauna" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><strong>Monteverde</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td>Azure AD / ADSync Exploitation</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Monteverde" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><strong>Resolute</strong></td>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td>Password Spraying / Privilege Escalation</td>
+                                <td>N/A</td>
+                                <td><a href="https://app.hackthebox.com/machines/Resolute" target="_blank">🔗 HackTheBox</a></td>
+                                <td><a href="#" class="writeup-link">📝</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Learning Paths -->
+            <section class="nav-section" id="learning-paths">
+                <h2>📚 Learning Paths</h2>
+
+                <div class="learning-path">
+                    <h4>🟢 Beginner Path (1-2 weeks)</h4>
+                    <p><strong>Goal:</strong> Understand basic exploitation and privilege escalation</p>
+                    <div class="machines-list">
+                        <div class="machine-tag">Blue</div>
+                        <div class="machine-tag">Legacy</div>
+                        <div class="machine-tag">Lame</div>
+                        <div class="machine-tag">Devel</div>
+                        <div class="machine-tag">Popcorn</div>
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h4>🟡 OSCP Preparation (4-6 weeks)</h4>
+                    <p><strong>Goal:</strong> Master OSCP-like machines and techniques</p>
+                    <div class="machines-list">
+                        <div class="machine-tag">Blue</div>
+                        <div class="machine-tag">Legacy</div>
+                        <div class="machine-tag">Lame</div>
+                        <div class="machine-tag">Devel</div>
+                        <div class="machine-tag">Active</div>
+                        <div class="machine-tag">Jerry</div>
+                        <div class="machine-tag">Remote</div>
+                        <div class="machine-tag">Cronos</div>
+                    </div>
+                </div>
+
+                <div class="learning-path">
+                    <h4>🔐 Active Directory Master (3-4 weeks)</h4>
+                    <p><strong>Goal:</strong> Master AD exploitation techniques</p>
+                    <div class="machines-list">
+                        <div class="machine-tag">Active</div>
+                        <div class="machine-tag">Forest</div>
+                        <div class="machine-tag">Cascade</div>
+                        <div class="machine-tag">Sauna</div>
+                        <div class="machine-tag">Monteverde</div>
+                        <div class="machine-tag">Resolute</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Techniques Library -->
+            <section id="techniques">
+                <h2>🛠️ Techniques Library</h2>
+
+                <h3>Privilege Escalation</h3>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h4>Windows Privilege Escalation</h4>
+                        <ul>
+                            <li>Token Impersonation</li>
+                            <li>Service Exploitation</li>
+                            <li>Kernel Exploits</li>
+                            <li>PrintSpoofer</li>
+                            <li>SeImpersonate Abuse</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>Linux Privilege Escalation</h4>
+                        <ul>
+                            <li>Sudo Abuse</li>
+                            <li>SUID Exploitation</li>
+                            <li>Capability Abuse</li>
+                            <li>Kernel Exploits</li>
+                            <li>Cron Jobs</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>Active Directory PrivEsc</h4>
+                        <ul>
+                            <li>Kerberoasting</li>
+                            <li>ASREP Roasting</li>
+                            <li>Delegation Abuse</li>
+                            <li>Trust Relationships</li>
+                            <li>DCSync</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Lateral Movement</h3>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h4>Network Pivoting</h4>
+                        <ul>
+                            <li>SOCKS Proxy</li>
+                            <li>Chisel Tunneling</li>
+                            <li>Port Forwarding</li>
+                            <li>SSH Tunneling</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>Credential Theft</h4>
+                        <ul>
+                            <li>Pass-the-Hash</li>
+                            <li>Mimikatz</li>
+                            <li>Secretsdump</li>
+                            <li>Credential Dumping</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>Active Directory Attacks</h4>
+                        <ul>
+                            <li>Golden Ticket</li>
+                            <li>Silver Ticket</li>
+                            <li>Overpass-the-Hash</li>
+                            <li>Constrained Delegation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Web Exploitation</h3>
+                <div class="techniques-grid">
+                    <div class="technique-card">
+                        <h4>OWASP Top 10</h4>
+                        <ul>
+                            <li>SQL Injection</li>
+                            <li>XSS (Cross-Site Scripting)</li>
+                            <li>CSRF</li>
+                            <li>Authentication Bypass</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>File Operations</h4>
+                        <ul>
+                            <li>File Upload Bypass</li>
+                            <li>LFI (Local File Inclusion)</li>
+                            <li>RFI (Remote File Inclusion)</li>
+                            <li>Path Traversal</li>
+                        </ul>
+                    </div>
+                    <div class="technique-card">
+                        <h4>Code Execution</h4>
+                        <ul>
+                            <li>Remote Code Execution</li>
+                            <li>Command Injection</li>
+                            <li>Template Injection</li>
+                            <li>Deserialization</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tools & Resources -->
+            <section id="tools">
+                <h2>🔧 Tools & Resources</h2>
+
+                <h3>Essential Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <h4>🔍 Reconnaissance</h4>
+                        <p>nmap, masscan, dirb, gobuster, wfuzz</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>🎯 Exploitation</h4>
+                        <p>Metasploit, Burp Suite, Exploit-DB, Custom Scripts</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>🔐 Privilege Escalation</h4>
+                        <p>LinPEAS, WinPEAS, GTFOBins, PayloadAllTheThings</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>📊 Active Directory</h4>
+                        <p>BloodHound, Impacket, PowerView, Mimikatz</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>🔑 Password Attacks</h4>
+                        <p>John the Ripper, Hashcat, Hydra, Medusa</p>
+                    </div>
+                    <div class="tool-card">
+                        <h4>🐚 Post-Exploitation</h4>
+                        <p>Reverse Shells, WebShells, Empire, Meterpreter</p>
+                    </div>
+                </div>
+
+                <h3>Recommended Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h4>📺 Video Tutorials</h4>
+                        <a href="https://www.youtube.com/@ippsec/" target="_blank">🎬 IppSec - HTB Walkthroughs</a>
+                        <a href="https://www.youtube.com/" target="_blank">🎬 YouTube Pentesting</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>📖 Documentation</h4>
+                        <a href="https://book.hacktricks.xyz/" target="_blank">📚 HackTricks - Comprehensive Guide</a>
+                        <a href="https://gtfobins.github.io/" target="_blank">📚 GTFOBins - Linux Privilege Escalation</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🔍 Exploit Resources</h4>
+                        <a href="https://www.exploit-db.com/" target="_blank">🔗 Exploit-DB</a>
+                        <a href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank">🔗 PayloadAllTheThings</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🎓 Learning Platforms</h4>
+                        <a href="https://www.hackthebox.com/" target="_blank">🎯 HackTheBox</a>
+                        <a href="https://tryhackme.com/" target="_blank">🎯 TryHackMe</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How to Use -->
+            <section>
+                <h2>📖 How to Use These Writeups</h2>
+                <p>Each writeup includes detailed information about the machine exploitation:</p>
+                <div style="background: #f9f9f9; border-left: 4px solid #667eea; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 8px 0;">✅ <strong>Enumeration Phase</strong> - Port scanning, service identification, vulnerability discovery</li>
+                        <li style="padding: 8px 0;">✅ <strong>Exploitation Phase</strong> - Vulnerability explanation, step-by-step exploitation</li>
+                        <li style="padding: 8px 0;">✅ <strong>Privilege Escalation Phase</strong> - Escalation techniques and detailed steps</li>
+                        <li style="padding: 8px 0;">✅ <strong>Post-Exploitation</strong> - Flag capture, system information, lessons learned</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Progress Tracker -->
+            <section>
+                <h2>📊 Progress Tracker</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Difficulty</th>
+                                <th>Windows</th>
+                                <th>Linux</th>
+                                <th>Total</th>
+                                <th>Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="difficulty-easy">Easy</span></td>
+                                <td>0/8</td>
+                                <td>0/7</td>
+                                <td>0/15</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="difficulty-medium">Medium</span></td>
+                                <td>0/10</td>
+                                <td>0/8</td>
+                                <td>0/18</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr>
+                                <td><span class="difficulty-hard">Hard</span></td>
+                                <td>0/7</td>
+                                <td>0/3</td>
+                                <td>0/10</td>
+                                <td>0%</td>
+                            </tr>
+                            <tr style="font-weight: bold; background: #f5f5f5;">
+                                <td><strong>TOTAL</strong></td>
+                                <td>0/25</td>
+                                <td>0/18</td>
+                                <td>0/43</td>
+                                <td>0%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>HackTheBox Writeups</strong> - Comprehensive Machine Collection</p>
+            <p>Last Updated: <strong>January 8, 2025</strong></p>
+            <p>For the latest updates, visit <a href="https://github.com/yourusername/htb-writeups" target="_blank">GitHub Repository</a></p>
+            <p style="margin-top: 20px; font-size: 0.9em;">⚖️ These writeups are for educational purposes only. Use responsibly and legally.</p>
+        </div>
+    </div>
+</body>
+</html>
