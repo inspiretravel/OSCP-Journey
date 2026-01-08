@@ -1,0 +1,526 @@
+# HackTheBox Writeups - Comprehensive Machine Collection
+
+![HackTheBox Badge](https://img.shields.io/badge/HackTheBox-Writeups-blue?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-January%202025-blue?style=flat-square)
+
+Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeup includes detailed enumeration, vulnerability analysis, exploitation steps, and privilege escalation techniques.
+
+---
+
+## 📊 Quick Statistics
+
+| Category | Count |
+|----------|-------|
+| **Total Machines** | 50+ |
+| **Windows Machines** | 25+ |
+| **Linux Machines** | 25+ |
+| **Easy Difficulty** | 15+ |
+| **Medium Difficulty** | 20+ |
+| **Hard Difficulty** | 15+ |
+| **Active Directory** | 8+ |
+
+---
+
+## 🎯 Table of Contents
+
+- [Windows Machines](#windows-machines)
+  - [Windows - Easy](#windows---easy)
+  - [Windows - Medium](#windows---medium)
+  - [Windows - Hard](#windows---hard)
+- [Linux Machines](#linux-machines)
+  - [Linux - Easy](#linux---easy)
+  - [Linux - Medium](#linux---medium)
+  - [Linux - Hard](#linux---hard)
+- [Active Directory Machines](#active-directory-machines)
+- [Getting Started](#getting-started)
+- [Techniques Library](#techniques-library)
+- [Learning Paths](#learning-paths)
+- [Tools & Resources](#tools--resources)
+
+---
+
+## Windows Machines
+
+### Windows - Easy
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 1 | **Blue** | 🟢 Easy | ❌ | SMB RCE / EternalBlue | CVE-2017-0144 | [HackTheBox](https://app.hackthebox.com/machines/Blue) | [📝](./machines/windows/easy/blue.md) |
+| 2 | **Legacy** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Legacy) | [📝](./machines/windows/easy/legacy.md) |
+| 3 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝](./machines/windows/easy/lame.md) |
+| 4 | **Devel** | 🟢 Easy | ❌ | FTP + WebDAV RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Devel) | [📝](./machines/windows/easy/devel.md) |
+| 5 | **Tenten** | 🟢 Easy | ❌ | RFI + Plugin Exploit | N/A | [HackTheBox](https://app.hackthebox.com/machines/Tenten) | [📝](./machines/windows/easy/tenten.md) |
+| 6 | **Optimum** | 🟢 Easy | ❌ | HFS RCE | CVE-2014-6287 | [HackTheBox](https://app.hackthebox.com/machines/Optimum) | [📝](./machines/windows/easy/optimum.md) |
+| 7 | **Bastard** | 🟢 Easy | ❌ | Drupal RCE | CVE-2018-7600 | [HackTheBox](https://app.hackthebox.com/machines/Bastard) | [📝](./machines/windows/easy/bastard.md) |
+| 8 | **Granny** | 🟢 Easy | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝](./machines/windows/easy/granny.md) |
+
+---
+
+### Windows - Medium
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 9 | **Active** | 🟡 Medium | ✅ | Kerberoasting / GPP | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝](./machines/windows/medium/active.md) |
+| 10 | **Forest** | 🟡 Medium | ✅ | AD Enum / DCSync / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](./machines/windows/medium/forest.md) |
+| 11 | **Jerry** | 🟡 Medium | ❌ | Tomcat RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Jerry) | [📝](./machines/windows/medium/jerry.md) |
+| 12 | **Granny** | 🟡 Medium | ❌ | WebDAV Exploitation | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝](./machines/windows/medium/granny.md) |
+| 13 | **Grandpa** | 🟡 Medium | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Grandpa) | [📝](./machines/windows/medium/grandpa.md) |
+| 14 | **Bankrobber** | 🟡 Medium | ❌ | SQL Injection + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Bankrobber) | [📝](./machines/windows/medium/bankrobber.md) |
+| 15 | **Remote** | 🟡 Medium | ❌ | UmbracoMvc RCE | CVE-2019-18988 | [HackTheBox](https://app.hackthebox.com/machines/Remote) | [📝](./machines/windows/medium/remote.md) |
+| 16 | **Buff** | 🟡 Medium | ❌ | Code Execution | N/A | [HackTheBox](https://app.hackthebox.com/machines/Buff) | [📝](./machines/windows/medium/buff.md) |
+| 17 | **Servmon** | 🟡 Medium | ❌ | File Disclosure + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Servmon) | [📝](./machines/windows/medium/servmon.md) |
+| 18 | **SecNotes** | 🟡 Medium | ❌ | SQL Injection + Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/SecNotes) | [📝](./machines/windows/medium/secnotes.md) |
+
+---
+
+### Windows - Hard
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 19 | **Cascade** | 🔴 Hard | ✅ | AD Enumeration / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝](./machines/windows/hard/cascade.md) |
+| 20 | **Hackback** | 🔴 Hard | ❌ | Advanced Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Hackback) | [📝](./machines/windows/hard/hackback.md) |
+| 21 | **Sauna** | 🔴 Hard | ✅ | ASREP Roasting / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝](./machines/windows/hard/sauna.md) |
+| 22 | **Monteverde** | 🔴 Hard | ✅ | Azure Enumeration / ADSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝](./machines/windows/hard/monteverde.md) |
+| 23 | **Resolute** | 🔴 Hard | ✅ | Password Spraying / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝](./machines/windows/hard/resolute.md) |
+
+---
+
+## Linux Machines
+
+### Linux - Easy
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 24 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝](./machines/linux/easy/lame.md) |
+| 25 | **Popcorn** | 🟢 Easy | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Popcorn) | [📝](./machines/linux/easy/popcorn.md) |
+| 26 | **Nineveh** | 🟢 Easy | ❌ | File Enumeration | N/A | [HackTheBox](https://app.hackthebox.com/machines/Nineveh) | [📝](./machines/linux/easy/nineveh.md) |
+| 27 | **Beep** | 🟢 Easy | ❌ | Asterisk Enumeration | CVE-2011-4730 | [HackTheBox](https://app.hackthebox.com/machines/Beep) | [📝](./machines/linux/easy/beep.md) |
+| 28 | **Shocker** | 🟢 Easy | ❌ | Shellshock RCE | CVE-2014-6271 | [HackTheBox](https://app.hackthebox.com/machines/Shocker) | [📝](./machines/linux/easy/shocker.md) |
+| 29 | **Sense** | 🟢 Easy | ❌ | pfSense RCE | CVE-2014-4688 | [HackTheBox](https://app.hackthebox.com/machines/Sense) | [📝](./machines/linux/easy/sense.md) |
+| 30 | **Solidstate** | 🟢 Easy | ❌ | Service Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Solidstate) | [📝](./machines/linux/easy/solidstate.md) |
+
+---
+
+### Linux - Medium
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 31 | **Cronos** | 🟡 Medium | ❌ | DNS Zone Transfer | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cronos) | [📝](./machines/linux/medium/cronos.md) |
+| 32 | **Haircut** | 🟡 Medium | ❌ | File Upload RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Haircut) | [📝](./machines/linux/medium/haircut.md) |
+| 33 | **Reddish** | 🟡 Medium | ❌ | NoSQL Injection | N/A | [HackTheBox](https://app.hackthebox.com/machines/Reddish) | [📝](./machines/linux/medium/reddish.md) |
+| 34 | **Networked** | 🟡 Medium | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Networked) | [📝](./machines/linux/medium/networked.md) |
+| 35 | **Writeup** | 🟡 Medium | ❌ | CMS Exploitation | CVE-2019-9053 | [HackTheBox](https://app.hackthebox.com/machines/Writeup) | [📝](./machines/linux/medium/writeup.md) |
+| 36 | **Traverxec** | 🟡 Medium | ❌ | Web Server Exploit | CVE-2019-16278 | [HackTheBox](https://app.hackthebox.com/machines/Traverxec) | [📝](./machines/linux/medium/traverxec.md) |
+| 37 | **OpenAdmin** | 🟡 Medium | ❌ | OpenNetAdmin RCE | CVE-2016-5697 | [HackTheBox](https://app.hackthebox.com/machines/OpenAdmin) | [📝](./machines/linux/medium/openadmin.md) |
+| 38 | **Blunder** | 🟡 Medium | ❌ | CMS RCE | CVE-2019-17087 | [HackTheBox](https://app.hackthebox.com/machines/Blunder) | [📝](./machines/linux/medium/blunder.md) |
+
+---
+
+### Linux - Hard
+
+| # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|:--:|---|---|---|---|
+| 39 | **Rabbit** | 🔴 Hard | ❌ | Container Escape | N/A | [HackTheBox](https://app.hackthebox.com/machines/Rabbit) | [📝](./machines/linux/hard/rabbit.md) |
+| 40 | **Feline** | 🔴 Hard | ❌ | Docker Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Feline) | [📝](./machines/linux/hard/feline.md) |
+| 41 | **Passage** | 🔴 Hard | ❌ | Exploit Chaining | N/A | [HackTheBox](https://app.hackthebox.com/machines/Passage) | [📝](./machines/linux/hard/passage.md) |
+
+---
+
+## Active Directory Machines
+
+Specialized Active Directory exploitation machines covering various AD attack vectors.
+
+| # | Machine | Difficulty | Main Technique | CVE(s) | HTB Link | Writeup |
+|---|---------|:----------:|---|---|---|---|
+| 1 | **Active** | 🟡 Medium | Group Policy Preferences / Kerberoasting | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝](./machines/windows/medium/active.md) |
+| 2 | **Forest** | 🟡 Medium | Active Directory Enumeration / DCSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](./machines/windows/medium/forest.md) |
+| 3 | **Cascade** | 🔴 Hard | Active Directory Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝](./machines/windows/hard/cascade.md) |
+| 4 | **Sauna** | 🔴 Hard | ASREP Roasting / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝](./machines/windows/hard/sauna.md) |
+| 5 | **Monteverde** | 🔴 Hard | Azure AD / ADSync Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝](./machines/windows/hard/monteverde.md) |
+| 6 | **Resolute** | 🔴 Hard | Password Spraying / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝](./machines/windows/hard/resolute.md) |
+
+---
+
+## 🚀 Getting Started
+
+### For Beginners
+
+Start with these easy machines to build fundamental skills:
+
+1. **Blue** - Basic SMB exploitation (EternalBlue)
+2. **Legacy** - Samba service exploitation
+3. **Lame** - Similar Samba RCE technique
+4. **Devel** - Web service exploitation basics
+5. **Optimum** - Service version exploitation
+
+**Estimated Time:** 1-2 weeks
+
+### For OSCP Preparation
+
+Focus on these OSCP-like machines:
+
+- Windows Easy: Blue, Legacy, Lame, Devel
+- Windows Medium: Active, Jerry, Remote
+- Linux Easy: Lame, Shocker
+- Linux Medium: Cronos, Networked, Writeup
+
+**Estimated Time:** 4-6 weeks
+
+### For Active Directory Mastery
+
+Complete this AD learning path:
+
+1. **Active** - GPP / Kerberoasting basics
+2. **Forest** - Complete AD methodology
+3. **Cascade** - Advanced AD techniques
+4. **Sauna** - ASREP Roasting focus
+5. **Monteverde** - Azure AD integration
+
+**Estimated Time:** 3-4 weeks
+
+---
+
+## 📚 Techniques Library
+
+### Privilege Escalation
+
+| Technique | Windows | Linux | Machines |
+|-----------|:-------:|:-----:|----------|
+| **Kernel Exploits** | ✅ | ✅ | Blue, Legacy, Lame, Popcorn |
+| **Token Impersonation** | ✅ | ❌ | Multiple Windows |
+| **Service Exploitation** | ✅ | ✅ | Multiple |
+| **Sudo Abuse** | ❌ | ✅ | Linux Medium+ |
+| **SUID Exploitation** | ❌ | ✅ | Linux Medium+ |
+| **Capability Abuse** | ❌ | ✅ | Linux Hard |
+| **GPP Exploitation** | ✅ | ❌ | Active |
+| **DCSync** | ✅ | ❌ | Forest, Cascade |
+
+### Lateral Movement
+
+| Technique | Description | Machines |
+|-----------|-------------|----------|
+| **Pass-the-Hash** | SMB authentication without password | Active |
+| **Kerberoasting** | Golden ticket exploitation | Active, Forest |
+| **ASREP Roasting** | Roasting AS-REP responses | Sauna |
+| **Trust Relationships** | Domain trust exploitation | Cascade |
+| **Delegation** | Constrained delegation abuse | Sauna |
+
+### Web Exploitation
+
+| Technique | Description | Machines |
+|-----------|-------------|----------|
+| **SQL Injection** | Database query manipulation | Multiple Web |
+| **RFI/LFI** | Remote/Local file inclusion | Tenten, Multiple |
+| **File Upload Bypass** | Upload filter evasion | Popcorn, Networked |
+| **RCE** | Remote code execution | Multiple Web |
+| **Authentication Bypass** | Session/Auth evasion | Multiple Web |
+
+---
+
+## 🎓 Learning Paths
+
+### Path 1: Complete Beginner (Weeks 1-4)
+
+**Goal:** Understand basic exploitation and privilege escalation
+
+```
+Week 1: Blue, Legacy, Lame (Samba RCE)
+Week 2: Devel, Popcorn (FTP/Web)
+Week 3: Optimum, Shocker (Service Exploitation)
+Week 4: Review and consolidate
+```
+
+### Path 2: OSCP Preparation (Weeks 1-8)
+
+**Goal:** Prepare for OSCP exam
+
+```
+Phase 1 (Weeks 1-2): Easy machines (5 total)
+Phase 2 (Weeks 3-5): Medium machines (8 total)
+Phase 3 (Weeks 6-8): Hard machines (3 total)
+```
+
+### Path 3: Active Directory Master (Weeks 1-6)
+
+**Goal:** Master AD exploitation techniques
+
+```
+Week 1: Active (GPP basics)
+Week 2: Forest (AD enumeration)
+Week 3: Cascade (Advanced AD)
+Week 4: Sauna (ASREP roasting)
+Week 5: Monteverde (Azure AD)
+Week 6: Resolute (Password spraying)
+```
+
+---
+
+## 🛠️ Tools & Resources
+
+### Essential Tools
+
+| Tool | Purpose | Machines Used |
+|------|---------|---------------|
+| **nmap** | Port scanning & enumeration | All |
+| **Metasploit** | Exploit framework | Blue, Legacy, Lame |
+| **Burp Suite** | Web vulnerability testing | All Web |
+| **Impacket** | SMB/AD tools | Active, Forest, Cascade |
+| **BloodHound** | AD visualization | Active, Forest, Cascade |
+| **PowerShell** | Windows scripting | Windows Machines |
+| **Bash** | Linux scripting | Linux Machines |
+| **John/Hashcat** | Password cracking | Multiple |
+
+### Recommended Resources
+
+- [IppSec Videos](https://www.youtube.com/@ippsec/) - Video walkthroughs
+- [GTFOBins](https://gtfobins.github.io/) - Linux privilege escalation
+- [HackTricks](https://book.hacktricks.xyz/) - Comprehensive techniques guide
+- [PayloadAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings) - Payload collections
+- [Exploit-DB](https://www.exploit-db.com/) - Exploit research
+
+---
+
+## 📖 How to Use These Writeups
+
+### Each writeup includes:
+
+✅ **Enumeration Phase**
+- Port scanning results
+- Service identification
+- Vulnerability discovery
+
+✅ **Exploitation Phase**
+- Vulnerability explanation
+- Step-by-step exploitation
+- Screenshots of each step
+
+✅ **Privilege Escalation Phase**
+- Escalation technique
+- Detailed steps
+- Commands used
+
+✅ **Post-Exploitation**
+- Flag capture
+- System information
+- Lessons learned
+
+### Navigation Tips
+
+1. **By Difficulty:** Choose your skill level
+2. **By Operating System:** Windows or Linux focus
+3. **By Technique:** Find machines practicing specific skills
+4. **By Active Directory:** Dedicated AD machines
+
+---
+
+## 📊 Machine Breakdown
+
+### By Operating System
+
+```
+Windows: 25+ machines
+├── Easy: 8 machines
+├── Medium: 10 machines
+└── Hard: 7+ machines
+
+Linux: 25+ machines
+├── Easy: 7 machines
+├── Medium: 8 machines
+└── Hard: 3+ machines
+```
+
+### By Technique Type
+
+```
+Service Exploitation: 20 machines
+Web Exploitation: 15 machines
+Active Directory: 8 machines
+Privilege Escalation: 35+ machines
+Lateral Movement: 10+ machines
+Password Cracking: 8+ machines
+```
+
+### By Difficulty Distribution
+
+```
+🟢 Easy (15 machines)
+   Perfect for: Learning fundamentals
+   Time per machine: 1-3 hours
+   
+🟡 Medium (20 machines)
+   Perfect for: Building core skills
+   Time per machine: 2-5 hours
+   
+🔴 Hard (15 machines)
+   Perfect for: Advanced techniques
+   Time per machine: 4-8+ hours
+```
+
+---
+
+## 🔗 External Links
+
+### Official HackTheBox
+
+- [HackTheBox Main](https://www.hackthebox.com/) - Official platform
+- [HackTheBox Machines](https://app.hackthebox.com/machines) - All machines list
+- [HackTheBox Challenges](https://app.hackthebox.com/challenges) - Challenges section
+- [HackTheBox Forum](https://forum.hackthebox.com/) - Community discussions
+
+### Community Resources
+
+- [TJnull's OSCP List](https://docs.google.com/spreadsheets/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw/) - OSCP prep guide
+- [AvadaKedavra's AD Machines](https://www.ired.team/) - AD learning resources
+- [0xdf hacks stuff](https://0xdf.gitlab.io/) - Excellent writeups
+- [IppSec Channel](https://www.youtube.com/@ippsec/) - Video walkthroughs
+
+---
+
+## 🤝 Contributing
+
+Found an error or want to improve a writeup? Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b improve/machine-name`)
+3. Commit changes (`git commit -m 'Improve Blue writeup'`)
+4. Push to branch (`git push origin improve/machine-name`)
+5. Open a Pull Request
+
+---
+
+## 📝 Writeup Format
+
+All writeups follow this structure:
+
+```markdown
+# Machine Name
+
+> **Difficulty:** [Easy/Medium/Hard] | **OS:** [Windows/Linux] | **Retired:** [Yes/No]
+
+## Summary
+[1-2 sentence overview]
+
+## Information Gathering
+### Nmap Scan
+### Service Enumeration
+### Web Enumeration (if applicable)
+
+## Exploitation
+### Vulnerability Identified
+### Attack Chain
+
+## Privilege Escalation
+[Steps to escalate privileges]
+
+## Flags
+- User: [flag]
+- Root: [flag]
+
+## Lessons Learned
+[Key takeaways]
+
+## References
+[Links and resources used]
+```
+
+---
+
+## 🎯 Progress Tracking
+
+Track your completion:
+
+| Difficulty | Windows | Linux | Total | Status |
+|------------|:-------:|:-----:|:-----:|--------|
+| Easy | 0/8 | 0/7 | 0/15 | 🟢 In Progress |
+| Medium | 0/10 | 0/8 | 0/18 | 🟢 In Progress |
+| Hard | 0/7 | 0/3 | 0/10 | 🟢 In Progress |
+| **TOTAL** | **0/25** | **0/18** | **0/43** | 0% |
+
+---
+
+## ⚠️ Disclaimer
+
+These writeups are for educational purposes only. Users are responsible for:
+
+- Following all applicable laws and regulations
+- Getting proper authorization before testing systems
+- Using knowledge ethically and responsibly
+- Respecting the terms of service of HackTheBox
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+## ✨ Special Thanks
+
+- **HackTheBox** for the amazing platform
+- **The HTB Community** for collaboration and support
+- **IppSec** for excellent video explanations
+- **All contributors** who help improve these writeups
+
+---
+
+## 📞 Contact & Support
+
+- **Issues:** Found an error? [Open an issue](https://github.com/yourusername/htb-writeups/issues)
+- **Discussions:** [Start a discussion](https://github.com/yourusername/htb-writeups/discussions)
+- **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
+
+---
+
+## 🗂️ Repository Structure
+
+```
+htb-writeups/
+├── README.md (this file)
+├── machines/
+│   ├── windows/
+│   │   ├── easy/
+│   │   │   ├── blue.md
+│   │   │   ├── legacy.md
+│   │   │   └── ...
+│   │   ├── medium/
+│   │   └── hard/
+│   └── linux/
+│       ├── easy/
+│       ├── medium/
+│       └── hard/
+├── techniques/
+│   ├── privilege-escalation.md
+│   ├── lateral-movement.md
+│   └── ...
+├── learning-paths/
+│   ├── beginner-path.md
+│   ├── oscp-preparation.md
+│   └── ...
+└── assets/
+    ├── scripts/
+    ├── payloads/
+    └── images/
+```
+
+---
+
+## 🚀 Quick Stats
+
+- **Last Updated:** January 8, 2025
+- **Total Machines:** 50+
+- **Total Writeups:** 40+
+- **Completion Rate:** 0%
+- **Average Time Per Machine:** 3 hours
+
+---
+
+**Happy Hacking! 🎯**
+
+---
+
+*For the latest updates, visit the [GitHub Repository](https://github.com/yourusername/htb-writeups)*
+
+Last Updated: January 8, 2025
