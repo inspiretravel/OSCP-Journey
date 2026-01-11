@@ -371,7 +371,7 @@ Password Cracking: 8+ machines
 
 ### Community Resources
 
-- [TJnull's OSCP List](https://docs.google.com/spreadsheets/d/1dwSMIAPIam0PuRBkCiDI88pU3yzrqqHkDtBngUHNCw/) - OSCP prep guide
+- [TJnull's OSCP List] - OSCP prep guide
 - [AvadaKedavra's AD Machines](https://www.ired.team/) - AD learning resources
 - [0xdf hacks stuff](https://0xdf.gitlab.io/) - Excellent writeups
 - [IppSec Channel](https://www.youtube.com/@ippsec/) - Video walkthroughs
