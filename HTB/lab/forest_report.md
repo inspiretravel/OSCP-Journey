@@ -21,6 +21,7 @@ This penetration test was conducted against the HTB Forest machine, a Windows Se
 **Timeline to Compromise:** Approximately 80 minutes from initial reconnaissance to full domain admin access.
 
 **<a href="https://labs.hackthebox.com/achievement/machine/1784602/212">HTB Forest Completion Badge</a>
+
 ---
 
 ## Methodology
