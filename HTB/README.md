@@ -47,14 +47,14 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 1 | **Blue** | 🟢 Easy | ❌ | SMB RCE / EternalBlue | CVE-2017-0144 | [HackTheBox](https://app.hackthebox.com/machines/Blue) | [📝](./machines/windows/easy/blue.md) |
-| 2 | **Legacy** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Legacy) | [📝](./machines/windows/easy/legacy.md) |
-| 3 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝](./machines/windows/easy/lame.md) |
-| 4 | **Devel** | 🟢 Easy | ❌ | FTP + WebDAV RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Devel) | [📝](./machines/windows/easy/devel.md) |
-| 5 | **Tenten** | 🟢 Easy | ❌ | RFI + Plugin Exploit | N/A | [HackTheBox](https://app.hackthebox.com/machines/Tenten) | [📝](./machines/windows/easy/tenten.md) |
-| 6 | **Optimum** | 🟢 Easy | ❌ | HFS RCE | CVE-2014-6287 | [HackTheBox](https://app.hackthebox.com/machines/Optimum) | [📝](./machines/windows/easy/optimum.md) |
-| 7 | **Bastard** | 🟢 Easy | ❌ | Drupal RCE | CVE-2018-7600 | [HackTheBox](https://app.hackthebox.com/machines/Bastard) | [📝](./machines/windows/easy/bastard.md) |
-| 8 | **Granny** | 🟢 Easy | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝](./machines/windows/easy/granny.md) |
+| 1 | **Blue** | 🟢 Easy | ❌ | SMB RCE / EternalBlue | CVE-2017-0144 | [HackTheBox](https://app.hackthebox.com/machines/Blue) | [📝]() |
+| 2 | **Legacy** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Legacy) | [📝]() |
+| 3 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝]() |
+| 4 | **Devel** | 🟢 Easy | ❌ | FTP + WebDAV RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Devel) | [📝]() |
+| 5 | **Tenten** | 🟢 Easy | ❌ | RFI + Plugin Exploit | N/A | [HackTheBox](https://app.hackthebox.com/machines/Tenten) | [📝]() |
+| 6 | **Optimum** | 🟢 Easy | ❌ | HFS RCE | CVE-2014-6287 | [HackTheBox](https://app.hackthebox.com/machines/Optimum) | [📝]() |
+| 7 | **Bastard** | 🟢 Easy | ❌ | Drupal RCE | CVE-2018-7600 | [HackTheBox](https://app.hackthebox.com/machines/Bastard) | [📝]() |
+| 8 | **Granny** | 🟢 Easy | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝]() |
 
 ---
 
@@ -62,16 +62,16 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 9 | **Active** | 🟡 Medium | ✅ | Kerberoasting / GPP | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝](./machines/windows/medium/active.md) |
-| 10 | **Forest** | 🟡 Medium | ✅ | AD Enum / DCSync / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](./machines/windows/medium/forest.md) |
-| 11 | **Jerry** | 🟡 Medium | ❌ | Tomcat RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Jerry) | [📝](./machines/windows/medium/jerry.md) |
-| 12 | **Granny** | 🟡 Medium | ❌ | WebDAV Exploitation | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝](./machines/windows/medium/granny.md) |
-| 13 | **Grandpa** | 🟡 Medium | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Grandpa) | [📝](./machines/windows/medium/grandpa.md) |
-| 14 | **Bankrobber** | 🟡 Medium | ❌ | SQL Injection + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Bankrobber) | [📝](./machines/windows/medium/bankrobber.md) |
-| 15 | **Remote** | 🟡 Medium | ❌ | UmbracoMvc RCE | CVE-2019-18988 | [HackTheBox](https://app.hackthebox.com/machines/Remote) | [📝](./machines/windows/medium/remote.md) |
-| 16 | **Buff** | 🟡 Medium | ❌ | Code Execution | N/A | [HackTheBox](https://app.hackthebox.com/machines/Buff) | [📝](./machines/windows/medium/buff.md) |
-| 17 | **Servmon** | 🟡 Medium | ❌ | File Disclosure + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Servmon) | [📝](./machines/windows/medium/servmon.md) |
-| 18 | **SecNotes** | 🟡 Medium | ❌ | SQL Injection + Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/SecNotes) | [📝](./machines/windows/medium/secnotes.md) |
+| 9 | **Active** | 🟡 Medium | ✅ | Kerberoasting / GPP | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝]() |
+| 10 | **Forest** | 🟡 Medium | ✅ | AD Enum / DCSync / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝]() |
+| 11 | **Jerry** | 🟡 Medium | ❌ | Tomcat RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Jerry) | [📝]() |
+| 12 | **Granny** | 🟡 Medium | ❌ | WebDAV Exploitation | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | [📝]() |
+| 13 | **Grandpa** | 🟡 Medium | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Grandpa) | [📝]() |
+| 14 | **Bankrobber** | 🟡 Medium | ❌ | SQL Injection + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Bankrobber) | [📝]() |
+| 15 | **Remote** | 🟡 Medium | ❌ | UmbracoMvc RCE | CVE-2019-18988 | [HackTheBox](https://app.hackthebox.com/machines/Remote) | [📝]() |
+| 16 | **Buff** | 🟡 Medium | ❌ | Code Execution | N/A | [HackTheBox](https://app.hackthebox.com/machines/Buff) | [📝](.) |
+| 17 | **Servmon** | 🟡 Medium | ❌ | File Disclosure + RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Servmon) | [📝]() |
+| 18 | **SecNotes** | 🟡 Medium | ❌ | SQL Injection + Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/SecNotes) | [📝]() |
 
 ---
 
@@ -79,11 +79,11 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 19 | **Cascade** | 🔴 Hard | ✅ | AD Enumeration / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝](./machines/windows/hard/cascade.md) |
-| 20 | **Hackback** | 🔴 Hard | ❌ | Advanced Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Hackback) | [📝](./machines/windows/hard/hackback.md) |
-| 21 | **Sauna** | 🔴 Hard | ✅ | ASREP Roasting / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝](./machines/windows/hard/sauna.md) |
-| 22 | **Monteverde** | 🔴 Hard | ✅ | Azure Enumeration / ADSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝](./machines/windows/hard/monteverde.md) |
-| 23 | **Resolute** | 🔴 Hard | ✅ | Password Spraying / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝](./machines/windows/hard/resolute.md) |
+| 19 | **Cascade** | 🔴 Hard | ✅ | AD Enumeration / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝]() |
+| 20 | **Hackback** | 🔴 Hard | ❌ | Advanced Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Hackback) | [📝]() |
+| 21 | **Sauna** | 🔴 Hard | ✅ | ASREP Roasting / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝]() |
+| 22 | **Monteverde** | 🔴 Hard | ✅ | Azure Enumeration / ADSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝]() |
+| 23 | **Resolute** | 🔴 Hard | ✅ | Password Spraying / Priv Esc | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝]() |
 
 ---
 
@@ -93,13 +93,13 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 24 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝](./machines/linux/easy/lame.md) |
-| 25 | **Popcorn** | 🟢 Easy | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Popcorn) | [📝](./machines/linux/easy/popcorn.md) |
-| 26 | **Nineveh** | 🟢 Easy | ❌ | File Enumeration | N/A | [HackTheBox](https://app.hackthebox.com/machines/Nineveh) | [📝](./machines/linux/easy/nineveh.md) |
-| 27 | **Beep** | 🟢 Easy | ❌ | Asterisk Enumeration | CVE-2011-4730 | [HackTheBox](https://app.hackthebox.com/machines/Beep) | [📝](./machines/linux/easy/beep.md) |
-| 28 | **Shocker** | 🟢 Easy | ❌ | Shellshock RCE | CVE-2014-6271 | [HackTheBox](https://app.hackthebox.com/machines/Shocker) | [📝](./machines/linux/easy/shocker.md) |
-| 29 | **Sense** | 🟢 Easy | ❌ | pfSense RCE | CVE-2014-4688 | [HackTheBox](https://app.hackthebox.com/machines/Sense) | [📝](./machines/linux/easy/sense.md) |
-| 30 | **Solidstate** | 🟢 Easy | ❌ | Service Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Solidstate) | [📝](./machines/linux/easy/solidstate.md) |
+| 24 | **Lame** | 🟢 Easy | ❌ | Samba RCE | CVE-2007-2447 | [HackTheBox](https://app.hackthebox.com/machines/Lame) | [📝]() |
+| 25 | **Popcorn** | 🟢 Easy | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Popcorn) | [📝]() |
+| 26 | **Nineveh** | 🟢 Easy | ❌ | File Enumeration | N/A | [HackTheBox](https://app.hackthebox.com/machines/Nineveh) | [📝]() |
+| 27 | **Beep** | 🟢 Easy | ❌ | Asterisk Enumeration | CVE-2011-4730 | [HackTheBox](https://app.hackthebox.com/machines/Beep) | [📝]() |
+| 28 | **Shocker** | 🟢 Easy | ❌ | Shellshock RCE | CVE-2014-6271 | [HackTheBox](https://app.hackthebox.com/machines/Shocker) | [📝]() |
+| 29 | **Sense** | 🟢 Easy | ❌ | pfSense RCE | CVE-2014-4688 | [HackTheBox](https://app.hackthebox.com/machines/Sense) | [📝]() |
+| 30 | **Solidstate** | 🟢 Easy | ❌ | Service Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Solidstate) | [📝]() |
 
 ---
 
@@ -107,14 +107,14 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 31 | **Cronos** | 🟡 Medium | ❌ | DNS Zone Transfer | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cronos) | [📝](./machines/linux/medium/cronos.md) |
-| 32 | **Haircut** | 🟡 Medium | ❌ | File Upload RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Haircut) | [📝](./machines/linux/medium/haircut.md) |
-| 33 | **Reddish** | 🟡 Medium | ❌ | NoSQL Injection | N/A | [HackTheBox](https://app.hackthebox.com/machines/Reddish) | [📝](./machines/linux/medium/reddish.md) |
-| 34 | **Networked** | 🟡 Medium | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Networked) | [📝](./machines/linux/medium/networked.md) |
-| 35 | **Writeup** | 🟡 Medium | ❌ | CMS Exploitation | CVE-2019-9053 | [HackTheBox](https://app.hackthebox.com/machines/Writeup) | [📝](./machines/linux/medium/writeup.md) |
-| 36 | **Traverxec** | 🟡 Medium | ❌ | Web Server Exploit | CVE-2019-16278 | [HackTheBox](https://app.hackthebox.com/machines/Traverxec) | [📝](./machines/linux/medium/traverxec.md) |
-| 37 | **OpenAdmin** | 🟡 Medium | ❌ | OpenNetAdmin RCE | CVE-2016-5697 | [HackTheBox](https://app.hackthebox.com/machines/OpenAdmin) | [📝](./machines/linux/medium/openadmin.md) |
-| 38 | **Blunder** | 🟡 Medium | ❌ | CMS RCE | CVE-2019-17087 | [HackTheBox](https://app.hackthebox.com/machines/Blunder) | [📝](./machines/linux/medium/blunder.md) |
+| 31 | **Cronos** | 🟡 Medium | ❌ | DNS Zone Transfer | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cronos) | [📝]() |
+| 32 | **Haircut** | 🟡 Medium | ❌ | File Upload RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Haircut) | [📝]() |
+| 33 | **Reddish** | 🟡 Medium | ❌ | NoSQL Injection | N/A | [HackTheBox](https://app.hackthebox.com/machines/Reddish) | [📝]() |
+| 34 | **Networked** | 🟡 Medium | ❌ | File Upload Bypass | N/A | [HackTheBox](https://app.hackthebox.com/machines/Networked) | [📝]() |
+| 35 | **Writeup** | 🟡 Medium | ❌ | CMS Exploitation | CVE-2019-9053 | [HackTheBox](https://app.hackthebox.com/machines/Writeup) | [📝](.) |
+| 36 | **Traverxec** | 🟡 Medium | ❌ | Web Server Exploit | CVE-2019-16278 | [HackTheBox](https://app.hackthebox.com/machines/Traverxec) | [📝]() |
+| 37 | **OpenAdmin** | 🟡 Medium | ❌ | OpenNetAdmin RCE | CVE-2016-5697 | [HackTheBox](https://app.hackthebox.com/machines/OpenAdmin) | [📝]() |
+| 38 | **Blunder** | 🟡 Medium | ❌ | CMS RCE | CVE-2019-17087 | [HackTheBox](https://app.hackthebox.com/machines/Blunder) | [📝]() |
 
 ---
 
@@ -122,9 +122,9 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
-| 39 | **Rabbit** | 🔴 Hard | ❌ | Container Escape | N/A | [HackTheBox](https://app.hackthebox.com/machines/Rabbit) | [📝](./machines/linux/hard/rabbit.md) |
-| 40 | **Feline** | 🔴 Hard | ❌ | Docker Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Feline) | [📝](./machines/linux/hard/feline.md) |
-| 41 | **Passage** | 🔴 Hard | ❌ | Exploit Chaining | N/A | [HackTheBox](https://app.hackthebox.com/machines/Passage) | [📝](./machines/linux/hard/passage.md) |
+| 39 | **Rabbit** | 🔴 Hard | ❌ | Container Escape | N/A | [HackTheBox](https://app.hackthebox.com/machines/Rabbit) | [📝]() |
+| 40 | **Feline** | 🔴 Hard | ❌ | Docker Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Feline) | [📝]() |
+| 41 | **Passage** | 🔴 Hard | ❌ | Exploit Chaining | N/A | [HackTheBox](https://app.hackthebox.com/machines/Passage) | [📝]() |
 
 ---
 
@@ -134,12 +134,12 @@ Specialized Active Directory exploitation machines covering various AD attack ve
 
 | # | Machine | Difficulty | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|---|---|---|---|
-| 1 | **Active** | 🟡 Medium | Group Policy Preferences / Kerberoasting | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝](./machines/windows/medium/active.md) |
-| 2 | **Forest** | 🟡 Medium | Active Directory Enumeration / DCSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](./machines/windows/medium/forest.md) |
-| 3 | **Cascade** | 🔴 Hard | Active Directory Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝](./machines/windows/hard/cascade.md) |
-| 4 | **Sauna** | 🔴 Hard | ASREP Roasting / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝](./machines/windows/hard/sauna.md) |
-| 5 | **Monteverde** | 🔴 Hard | Azure AD / ADSync Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝](./machines/windows/hard/monteverde.md) |
-| 6 | **Resolute** | 🔴 Hard | Password Spraying / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝](./machines/windows/hard/resolute.md) |
+| 1 | **Active** | 🟡 Medium | Group Policy Preferences / Kerberoasting | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | [📝]() |
+| 2 | **Forest** | 🟡 Medium | Active Directory Enumeration / DCSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](./lab/forest_report.md) |
+| 3 | **Cascade** | 🔴 Hard | Active Directory Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | [📝]() |
+| 4 | **Sauna** | 🔴 Hard | ASREP Roasting / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | [📝]() |
+| 5 | **Monteverde** | 🔴 Hard | Azure AD / ADSync Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝]() |
+| 6 | **Resolute** | 🔴 Hard | Password Spraying / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | [📝]() |
 
 ---
 
@@ -378,68 +378,6 @@ Password Cracking: 8+ machines
 
 ---
 
-## 🤝 Contributing
-
-Found an error or want to improve a writeup? Contributions are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b improve/machine-name`)
-3. Commit changes (`git commit -m 'Improve Blue writeup'`)
-4. Push to branch (`git push origin improve/machine-name`)
-5. Open a Pull Request
-
----
-
-## 📝 Writeup Format
-
-All writeups follow this structure:
-
-```markdown
-# Machine Name
-
-> **Difficulty:** [Easy/Medium/Hard] | **OS:** [Windows/Linux] | **Retired:** [Yes/No]
-
-## Summary
-[1-2 sentence overview]
-
-## Information Gathering
-### Nmap Scan
-### Service Enumeration
-### Web Enumeration (if applicable)
-
-## Exploitation
-### Vulnerability Identified
-### Attack Chain
-
-## Privilege Escalation
-[Steps to escalate privileges]
-
-## Flags
-- User: [flag]
-- Root: [flag]
-
-## Lessons Learned
-[Key takeaways]
-
-## References
-[Links and resources used]
-```
-
----
-
-## 🎯 Progress Tracking
-
-Track your completion:
-
-| Difficulty | Windows | Linux | Total | Status |
-|------------|:-------:|:-----:|:-----:|--------|
-| Easy | 0/8 | 0/7 | 0/15 | 🟢 In Progress |
-| Medium | 0/10 | 0/8 | 0/18 | 🟢 In Progress |
-| Hard | 0/7 | 0/3 | 0/10 | 🟢 In Progress |
-| **TOTAL** | **0/25** | **0/18** | **0/43** | 0% |
-
----
-
 ## ⚠️ Disclaimer
 
 These writeups are for educational purposes only. Users are responsible for:
@@ -466,46 +404,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-## 📞 Contact & Support
-
-- **Issues:** Found an error? [Open an issue](https://github.com/yourusername/htb-writeups/issues)
-- **Discussions:** [Start a discussion](https://github.com/yourusername/htb-writeups/discussions)
-- **Twitter:** [@yourhandle](https://twitter.com/yourhandle)
-
----
-
-## 🗂️ Repository Structure
-
-```
-htb-writeups/
-├── README.md (this file)
-├── machines/
-│   ├── windows/
-│   │   ├── easy/
-│   │   │   ├── blue.md
-│   │   │   ├── legacy.md
-│   │   │   └── ...
-│   │   ├── medium/
-│   │   └── hard/
-│   └── linux/
-│       ├── easy/
-│       ├── medium/
-│       └── hard/
-├── techniques/
-│   ├── privilege-escalation.md
-│   ├── lateral-movement.md
-│   └── ...
-├── learning-paths/
-│   ├── beginner-path.md
-│   ├── oscp-preparation.md
-│   └── ...
-└── assets/
-    ├── scripts/
-    ├── payloads/
-    └── images/
-```
-
----
 
 ## 🚀 Quick Stats
 
@@ -517,10 +415,8 @@ htb-writeups/
 
 ---
 
-**Happy Hacking! 🎯**
+**Happy Hacking and Learning! 🎯**
 
 ---
 
-*For the latest updates, visit the [GitHub Repository](https://github.com/yourusername/htb-writeups)*
-
-Last Updated: January 8, 2025
+Last Updated: January 11, 2025
