@@ -63,7 +63,7 @@ Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeu
 | # | Machine | Difficulty | AD | Main Technique | CVE(s) | HTB Link | Writeup |
 |---|---------|:----------:|:--:|---|---|---|---|
 | 9 | **Active** | 🟡 Medium | ✅ | Kerberoasting / GPP | CVE-2012-1493 | [HackTheBox](https://app.hackthebox.com/machines/Active) | |
-| 10 | **Forest** | 🟡 Medium | ✅ | AD Enum / DCSync / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | |
+| 10 | **Forest** | 🟡 Medium | ✅ | AD Enum / DCSync / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) |[📝](https://github.com/inspiretravel/OSCP-Journey/blob/main/HTB/lab/forest_report.md) |
 | 11 | **Jerry** | 🟡 Medium | ❌ | Tomcat RCE | N/A | [HackTheBox](https://app.hackthebox.com/machines/Jerry) | |
 | 12 | **Granny** | 🟡 Medium | ❌ | WebDAV Exploitation | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Granny) | |
 | 13 | **Grandpa** | 🟡 Medium | ❌ | WebDAV RCE | CVE-2017-7269 | [HackTheBox](https://app.hackthebox.com/machines/Grandpa) | |
@@ -138,12 +138,12 @@ Specialized Active Directory exploitation machines covering various AD attack ve
 | 2 | **Forest** | 🟡 Medium | Active Directory Enumeration / DCSync | N/A | [HackTheBox](https://app.hackthebox.com/machines/Forest) | [📝](https://github.com/inspiretravel/OSCP-Journey/blob/main/HTB/lab/forest_report.md) |
 | 3 | **Cascade** | 🔴 Hard | Active Directory Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Cascade) | |
 | 4 | **Sauna** | 🔴 Hard | ASREP Roasting / Kerberoasting | N/A | [HackTheBox](https://app.hackthebox.com/machines/Sauna) | |
-| 5 | **Monteverde** | 🔴 Hard | Azure AD / ADSync Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | |
+| 5 | **Monteverde** | 🔴 Hard | Azure AD / ADSync Exploitation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Monteverde) | [📝](https://github.com/inspiretravel/OSCP/blob/main/HTB/lab/monteverde_report.md)|
 | 6 | **Resolute** | 🔴 Hard | Password Spraying / Privilege Escalation | N/A | [HackTheBox](https://app.hackthebox.com/machines/Resolute) | |
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started 
 
 ### For Beginners
 
@@ -182,7 +182,7 @@ Complete this AD learning path:
 
 ---
 
-## 📚 Techniques Library
+## Techniques Library
 
 ### Privilege Escalation
 
@@ -219,7 +219,7 @@ Complete this AD learning path:
 
 ---
 
-## 🎓 Learning Paths
+## Learning Paths
 
 ### Path 1: Complete Beginner (Weeks 1-4)
 
@@ -257,7 +257,7 @@ Week 6: Resolute (Password spraying)
 
 ---
 
-## 🛠️ Tools & Resources
+## Tools & Resources
 
 ### Essential Tools
 
@@ -282,7 +282,7 @@ Week 6: Resolute (Password spraying)
 
 ---
 
-## 📖 How to Use These Writeups
+## How to Use These Writeups
 
 ### Each writeup includes:
 
@@ -315,7 +315,7 @@ Week 6: Resolute (Password spraying)
 
 ---
 
-## 📊 Machine Breakdown
+## Machine Breakdown
 
 ### By Operating System
 
