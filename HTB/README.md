@@ -3,7 +3,7 @@
 ![HackTheBox Badge](https://img.shields.io/badge/HackTheBox-Writeups-blue?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)
-![Last Updated](https://img.shields.io/badge/Last%20Updated-January%202025-blue?style=flat-square)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-January%202026-blue?style=flat-square)
 
 Comprehensive, methodology-focused writeups for HackTheBox machines. Each writeup includes detailed enumeration, vulnerability analysis, exploitation steps, and privilege escalation techniques.
 
@@ -407,7 +407,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 🚀 Quick Stats
 
-- **Last Updated:** January 8, 2025
+- **Last Updated:** January 8, 2026
 - **Total Machines:** 50+
 - **Total Writeups:** 40+
 - **Completion Rate:** 0%
@@ -419,4 +419,4 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-Last Updated: January 11, 2025
+Last Updated: January 11, 2026
